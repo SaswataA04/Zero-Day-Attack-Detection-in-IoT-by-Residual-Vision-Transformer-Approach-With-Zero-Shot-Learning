@@ -1,0 +1,1713 @@
+{
+  "mode": "full",
+  "maximum_rows_per_file": null,
+  "notes": [
+    "Original CSV files are not modified. Label strings retain their case.",
+    "Prefix samples cannot establish full class coverage or full label proportions.",
+    "Merged label fields are split only in memory.",
+    "Missing-marker counts describe stored tokens, not a prescribed cleaning rule.",
+    "Retain source filenames for grouping; verify whether files correspond to original captures.",
+    "Keep labels out of model inputs. Audit provenance and class mapping before training."
+  ],
+  "files": [
+    {
+      "file": "dataset1.csv",
+      "status": "complete_file",
+      "rows_inspected": 452,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "benign": 452
+        },
+        "detailed-label": {
+          "-": 452
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 205,
+        "duration": 1,
+        "orig_bytes": 1,
+        "resp_bytes": 1,
+        "conn_state": 0,
+        "local_orig": 452,
+        "local_resp": 452,
+        "missed_bytes": 0,
+        "history": 0,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 452,
+        "label": 0,
+        "detailed-label": 452
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "id.orig_h",
+        "local_orig",
+        "local_resp",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1540469197.400159,
+        "maximum_inspected": 1540547904.130404,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 128
+      }
+    },
+    {
+      "file": "dataset10.csv",
+      "status": "complete_file",
+      "rows_inspected": 3394338,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Malicious": 3390604,
+          "Benign": 3734
+        },
+        "detailed-label": {
+          "C&C-HeartBeat-FileDownload": 11,
+          "PartOfAHorizontalPortScan": 3386119,
+          "Attack": 2752,
+          "-": 3734,
+          "C&C-HeartBeat-Attack": 834,
+          "C&C-PartOfAHorizontalPortScan": 888
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 3394325,
+        "duration": 1,
+        "orig_bytes": 1,
+        "resp_bytes": 1,
+        "conn_state": 0,
+        "local_orig": 3394338,
+        "local_resp": 3394338,
+        "missed_bytes": 0,
+        "history": 2188,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 3394338,
+        "label": 0,
+        "detailed-label": 3734
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1551377733.98153,
+        "maximum_inspected": 1551412914.022136,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 6542
+      }
+    },
+    {
+      "file": "dataset11.csv",
+      "status": "complete_file",
+      "rows_inspected": 237,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Malicious": 26,
+          "Benign": 211
+        },
+        "detailed-label": {
+          "C&C-FileDownload": 11,
+          "C&C": 14,
+          "-": 211,
+          "DDoS": 1
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 226,
+        "duration": 81,
+        "orig_bytes": 81,
+        "resp_bytes": 81,
+        "conn_state": 0,
+        "local_orig": 237,
+        "local_resp": 237,
+        "missed_bytes": 0,
+        "history": 0,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 237,
+        "label": 0,
+        "detailed-label": 211
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1547150788.860071,
+        "maximum_inspected": 1547157662.953055,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 12
+      }
+    },
+    {
+      "file": "dataset13.csv",
+      "status": "complete_file",
+      "rows_inspected": 4426,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Malicious": 6,
+          "Benign": 4420
+        },
+        "detailed-label": {
+          "FileDownload": 3,
+          "C&C-FileDownload": 3,
+          "-": 4420
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 2710,
+        "duration": 992,
+        "orig_bytes": 992,
+        "resp_bytes": 992,
+        "conn_state": 0,
+        "local_orig": 4426,
+        "local_resp": 4426,
+        "missed_bytes": 0,
+        "history": 0,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 4426,
+        "label": 0,
+        "detailed-label": 4420
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1547127282.523476,
+        "maximum_inspected": 1547157330.030005,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 1315
+      }
+    },
+    {
+      "file": "dataset15.csv",
+      "status": "complete_file",
+      "rows_inspected": 13645098,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Malicious": 13642435,
+          "Benign": 2663
+        },
+        "detailed-label": {
+          "C&C-HeartBeat": 15688,
+          "Okiru": 13626744,
+          "-": 2663,
+          "Okiru-Attack": 3
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 13644345,
+        "duration": 13635427,
+        "orig_bytes": 13635427,
+        "resp_bytes": 13635427,
+        "conn_state": 0,
+        "local_orig": 13645098,
+        "local_resp": 13645098,
+        "missed_bytes": 0,
+        "history": 371,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 13645098,
+        "label": 0,
+        "detailed-label": 2663
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1545395809.340185,
+        "maximum_inspected": 1545482199.268061,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 3136
+      }
+    },
+    {
+      "file": "dataset16.csv",
+      "status": "complete_file",
+      "rows_inspected": 10447787,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Malicious": 2185398,
+          "Benign": 8262389
+        },
+        "detailed-label": {
+          "C&C": 81,
+          "-": 8262389,
+          "C&C-FileDownload": 12,
+          "Attack": 3,
+          "DDoS": 2185302
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 10446261,
+        "duration": 4432615,
+        "orig_bytes": 4432615,
+        "resp_bytes": 4432615,
+        "conn_state": 0,
+        "local_orig": 10447787,
+        "local_resp": 10447787,
+        "missed_bytes": 0,
+        "history": 1638,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 10447787,
+        "label": 0,
+        "detailed-label": 8262389
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1545402842.657233,
+        "maximum_inspected": 1545489237.289245,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 39590
+      }
+    },
+    {
+      "file": "dataset17.csv",
+      "status": "complete_file",
+      "rows_inspected": 23145,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Benign": 1923,
+          "Malicious": 21222
+        },
+        "detailed-label": {
+          "-": 1923,
+          "C&C": 6706,
+          "PartOfAHorizontalPortScan": 122,
+          "DDoS": 14394
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 21298,
+        "duration": 17824,
+        "orig_bytes": 17824,
+        "resp_bytes": 17824,
+        "conn_state": 0,
+        "local_orig": 23145,
+        "local_resp": 23145,
+        "missed_bytes": 0,
+        "history": 0,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 23145,
+        "label": 0,
+        "detailed-label": 1923
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1545403816.8709,
+        "maximum_inspected": 1545490213.942227,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 1886
+      }
+    },
+    {
+      "file": "dataset19.csv",
+      "status": "complete_file",
+      "rows_inspected": 156103,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Malicious": 151567,
+          "Benign": 4536
+        },
+        "detailed-label": {
+          "PartOfAHorizontalPortScan": 145597,
+          "-": 4536,
+          "C&C": 8,
+          "Attack": 5962
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 150195,
+        "duration": 73944,
+        "orig_bytes": 73944,
+        "resp_bytes": 73944,
+        "conn_state": 0,
+        "local_orig": 156103,
+        "local_resp": 156103,
+        "missed_bytes": 0,
+        "history": 1207,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 0,
+        "label": 0,
+        "detailed-label": 4536
+      },
+      "empty_set_counts": {
+        "tunnel_parents": 156103
+      },
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1526756239.958006,
+        "maximum_inspected": 1526886286.965803,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 8252
+      }
+    },
+    {
+      "file": "dataset2.csv",
+      "status": "complete_file",
+      "rows_inspected": 1374,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "benign": 1374
+        },
+        "detailed-label": {
+          "-": 1374
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 454,
+        "duration": 298,
+        "orig_bytes": 298,
+        "resp_bytes": 298,
+        "conn_state": 0,
+        "local_orig": 1374,
+        "local_resp": 1374,
+        "missed_bytes": 0,
+        "history": 86,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 1374,
+        "label": 0,
+        "detailed-label": 1374
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1537522822.96553,
+        "maximum_inspected": 1537542573.267978,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 414
+      }
+    },
+    {
+      "file": "dataset20.csv",
+      "status": "complete_file",
+      "rows_inspected": 3286,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Benign": 3272,
+          "Malicious": 14
+        },
+        "detailed-label": {
+          "-": 3272,
+          "C&C-Torii": 14
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 1362,
+        "duration": 1161,
+        "orig_bytes": 1161,
+        "resp_bytes": 1161,
+        "conn_state": 0,
+        "local_orig": 3286,
+        "local_resp": 3286,
+        "missed_bytes": 0,
+        "history": 1,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 3286,
+        "label": 0,
+        "detailed-label": 3272
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1538572953.710599,
+        "maximum_inspected": 1538659000.666495,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 896
+      }
+    },
+    {
+      "file": "dataset21.csv",
+      "status": "complete_file",
+      "rows_inspected": 3209,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Benign": 3193,
+          "Malicious": 16
+        },
+        "detailed-label": {
+          "-": 3193,
+          "C&C-Torii": 16
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 2617,
+        "duration": 885,
+        "orig_bytes": 885,
+        "resp_bytes": 885,
+        "conn_state": 0,
+        "local_orig": 3209,
+        "local_resp": 3209,
+        "missed_bytes": 0,
+        "history": 0,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 3209,
+        "label": 0,
+        "detailed-label": 3193
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1538478769.600293,
+        "maximum_inspected": 1538565109.550107,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 313
+      }
+    },
+    {
+      "file": "dataset23.csv",
+      "status": "complete_file",
+      "rows_inspected": 1008748,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Malicious": 539473,
+          "Benign": 469275
+        },
+        "detailed-label": {
+          "PartOfAHorizontalPortScan": 539465,
+          "-": 469275,
+          "C&C": 8
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 1005507,
+        "duration": 796300,
+        "orig_bytes": 796300,
+        "resp_bytes": 796300,
+        "conn_state": 0,
+        "local_orig": 1008748,
+        "local_resp": 1008748,
+        "missed_bytes": 0,
+        "history": 17421,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 0,
+        "label": 0,
+        "detailed-label": 469275
+      },
+      "empty_set_counts": {
+        "tunnel_parents": 1008748
+      },
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1525879831.015073,
+        "maximum_inspected": 1526282683.030512,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 361070
+      }
+    },
+    {
+      "file": "dataset3.csv",
+      "status": "complete_file",
+      "rows_inspected": 130,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "benign": 130
+        },
+        "detailed-label": {
+          "-": 130
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 60,
+        "duration": 0,
+        "orig_bytes": 0,
+        "resp_bytes": 0,
+        "conn_state": 0,
+        "local_orig": 130,
+        "local_resp": 130,
+        "missed_bytes": 0,
+        "history": 49,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 130,
+        "label": 0,
+        "detailed-label": 130
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1562159819.172195,
+        "maximum_inspected": 1562164798.255806,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 45
+      }
+    },
+    {
+      "file": "dataset4.csv",
+      "status": "complete_file",
+      "rows_inspected": 6378293,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Benign": 22548,
+          "Malicious": 6355745
+        },
+        "detailed-label": {
+          "-": 22548,
+          "PartOfAHorizontalPortScan": 6355745
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 6377076,
+        "duration": 6361681,
+        "orig_bytes": 6361681,
+        "resp_bytes": 6361681,
+        "conn_state": 0,
+        "local_orig": 6378293,
+        "local_resp": 6378293,
+        "missed_bytes": 0,
+        "history": 2660,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 0,
+        "label": 0,
+        "detailed-label": 22548
+      },
+      "empty_set_counts": {
+        "tunnel_parents": 6378293
+      },
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1532508827.741325,
+        "maximum_inspected": 1532595195.007148,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 14241
+      }
+    },
+    {
+      "file": "dataset5.csv",
+      "status": "complete_file",
+      "rows_inspected": 10403,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Benign": 2181,
+          "Malicious": 8222
+        },
+        "detailed-label": {
+          "-": 2181,
+          "C&C": 8222
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 10403,
+        "duration": 6185,
+        "orig_bytes": 6185,
+        "resp_bytes": 6185,
+        "conn_state": 0,
+        "local_orig": 10403,
+        "local_resp": 10403,
+        "missed_bytes": 0,
+        "history": 0,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 0,
+        "label": 0,
+        "detailed-label": 2181
+      },
+      "empty_set_counts": {
+        "tunnel_parents": 10403
+      },
+      "constant_columns_in_inspected_rows": [
+        "service",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1533042911.474174,
+        "maximum_inspected": 1533129306.734905,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 1856
+      }
+    },
+    {
+      "file": "dataset6.csv",
+      "status": "complete_file",
+      "rows_inspected": 11454714,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Benign": 75955,
+          "Malicious": 11378759
+        },
+        "detailed-label": {
+          "-": 75955,
+          "C&C-HeartBeat": 5778,
+          "Okiru": 11333397,
+          "DDoS": 39584
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 11454706,
+        "duration": 11419542,
+        "orig_bytes": 11419542,
+        "resp_bytes": 11419542,
+        "conn_state": 0,
+        "local_orig": 11454714,
+        "local_resp": 11454714,
+        "missed_bytes": 0,
+        "history": 7039,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 0,
+        "label": 0,
+        "detailed-label": 75955
+      },
+      "empty_set_counts": {
+        "tunnel_parents": 11388988
+      },
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1532100684.348571,
+        "maximum_inspected": 1532187079.130022,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 34106
+      }
+    },
+    {
+      "file": "dataset7.csv",
+      "status": "complete_file",
+      "rows_inspected": 3581028,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Benign": 2476,
+          "Malicious": 3578552
+        },
+        "detailed-label": {
+          "-": 2476,
+          "C&C-HeartBeat": 95,
+          "DDoS": 3578457
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 3581026,
+        "duration": 3580404,
+        "orig_bytes": 3580404,
+        "resp_bytes": 3580404,
+        "conn_state": 0,
+        "local_orig": 3581028,
+        "local_resp": 3581028,
+        "missed_bytes": 0,
+        "history": 1,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 3581028,
+        "label": 0,
+        "detailed-label": 2476
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1568940041.665907,
+        "maximum_inspected": 1569026390.773122,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 1140860
+      }
+    },
+    {
+      "file": "dataset8.csv",
+      "status": "complete_file",
+      "rows_inspected": 19781378,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Malicious": 19779584,
+          "Benign": 1794
+        },
+        "detailed-label": {
+          "C&C-FileDownload": 12,
+          "C&C": 6,
+          "PartOfAHorizontalPortScan": 19779564,
+          "C&C-Mirai": 2,
+          "-": 1794
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 19781359,
+        "duration": 4,
+        "orig_bytes": 4,
+        "resp_bytes": 4,
+        "conn_state": 0,
+        "local_orig": 19781378,
+        "local_resp": 19781378,
+        "missed_bytes": 0,
+        "history": 1302,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 19781378,
+        "label": 0,
+        "detailed-label": 1794
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1552047872.736899,
+        "maximum_inspected": 1552100931.193613,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 3688
+      }
+    },
+    {
+      "file": "dataset9.csv",
+      "status": "complete_file",
+      "rows_inspected": 5410561,
+      "original_column_count": 21,
+      "parsed_column_count": 23,
+      "columns": [
+        "ts",
+        "uid",
+        "id.orig_h",
+        "id.orig_p",
+        "id.resp_h",
+        "id.resp_p",
+        "proto",
+        "service",
+        "duration",
+        "orig_bytes",
+        "resp_bytes",
+        "conn_state",
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "history",
+        "orig_pkts",
+        "orig_ip_bytes",
+        "resp_pkts",
+        "resp_ip_bytes",
+        "tunnel_parents",
+        "label",
+        "detailed-label"
+      ],
+      "split_combined_fields": [
+        [
+          "tunnel_parents",
+          "label",
+          "detailed-label"
+        ]
+      ],
+      "label_counts_in_inspected_rows": {
+        "label": {
+          "Malicious": 5406896,
+          "Benign": 3665
+        },
+        "detailed-label": {
+          "FileDownload": 14,
+          "-": 3665,
+          "PartOfAHorizontalPortScan": 5404959,
+          "C&C": 1922,
+          "C&C-FileDownload": 1
+        }
+      },
+      "missing_marker_counts": {
+        "ts": 0,
+        "uid": 0,
+        "id.orig_h": 0,
+        "id.orig_p": 0,
+        "id.resp_h": 0,
+        "id.resp_p": 0,
+        "proto": 0,
+        "service": 5410535,
+        "duration": 1,
+        "orig_bytes": 1,
+        "resp_bytes": 1,
+        "conn_state": 0,
+        "local_orig": 5410561,
+        "local_resp": 5410561,
+        "missed_bytes": 0,
+        "history": 1638,
+        "orig_pkts": 0,
+        "orig_ip_bytes": 0,
+        "resp_pkts": 0,
+        "resp_ip_bytes": 0,
+        "tunnel_parents": 5410561,
+        "label": 0,
+        "detailed-label": 3665
+      },
+      "empty_set_counts": {},
+      "constant_columns_in_inspected_rows": [
+        "local_orig",
+        "local_resp",
+        "missed_bytes",
+        "tunnel_parents"
+      ],
+      "timestamps": {
+        "present": true,
+        "minimum_inspected": 1551383430.865908,
+        "maximum_inspected": 1551409817.668471,
+        "invalid_inspected": 0,
+        "backward_steps_inspected": 4504
+      }
+    }
+  ]
+}

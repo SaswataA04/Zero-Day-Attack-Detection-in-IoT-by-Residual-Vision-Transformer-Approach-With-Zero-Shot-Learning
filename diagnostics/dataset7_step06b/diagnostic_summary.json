@@ -1,0 +1,149 @@
+{
+  "step": "06b_validation_score_and_image_hash_diagnostic",
+  "training_run": "C:\\Users\\Saswa\\OneDrive\\Desktop\\iot_zero_day_research\\trained\\dataset7_step06_balanced_trial01",
+  "selected_best_epoch": 1,
+  "epochs_completed": 2,
+  "class_weighting": "balanced",
+  "validation_n": 38198,
+  "default_decision_rule": "probability_malicious > 0.5; equality predicts benign",
+  "default_threshold_metrics": {
+    "threshold": 0.5,
+    "true_benign": 24,
+    "benign_flagged_malicious": 0,
+    "malicious_missed": 137,
+    "true_malicious": 38037,
+    "accuracy": 0.9964134247866381,
+    "macro_f1": 0.6288309093494697,
+    "balanced_accuracy": 0.9982055849531095,
+    "benign_precision": 0.14906832298136646,
+    "benign_recall": 1.0,
+    "malicious_precision": 1.0,
+    "malicious_recall": 0.9964111699062189
+  },
+  "confusion_matrix_actual_rows_predicted_columns": [
+    [
+      24,
+      0
+    ],
+    [
+      137,
+      38037
+    ]
+  ],
+  "confusion_order": [
+    "benign",
+    "malicious"
+  ],
+  "probability_summaries": {
+    "benign": {
+      "n": 24,
+      "unique_scores": 21,
+      "probability_malicious_quantiles": {
+        "min": 0.3667031228542328,
+        "p01": 0.3667552927136421,
+        "p25": 0.40749551355838776,
+        "median": 0.40848320722579956,
+        "p75": 0.410117506980896,
+        "p99": 0.4115815708041191,
+        "max": 0.4115985631942749
+      }
+    },
+    "malicious": {
+      "n": 38174,
+      "unique_scores": 124,
+      "probability_malicious_quantiles": {
+        "min": 0.3665046989917755,
+        "p01": 0.9999628067016602,
+        "p25": 0.9999700784683228,
+        "median": 0.9999701976776123,
+        "p75": 0.9999703168869019,
+        "p99": 0.9999704360961914,
+        "max": 0.9999704360961914
+      }
+    }
+  },
+  "ranking_metrics": {
+    "roc_auc_malicious": 0.9991273510766491,
+    "average_precision_malicious": 0.9999994486088587,
+    "average_precision_benign": 0.3989084832434864
+  },
+  "exploratory_validation_best_macro_f1_threshold": {
+    "threshold": 0.4096635580062866,
+    "true_benign": 17,
+    "benign_flagged_malicious": 7,
+    "malicious_missed": 30,
+    "true_malicious": 38144,
+    "accuracy": 0.9990313628985811,
+    "macro_f1": 0.7391942351785129,
+    "balanced_accuracy": 0.8537737290651578,
+    "benign_precision": 0.3617021276595745,
+    "benign_recall": 0.7083333333333334,
+    "malicious_precision": 0.9998165185709418,
+    "malicious_recall": 0.9992141247969822
+  },
+  "threshold_applied_to_model": false,
+  "epoch_metrics": [
+    {
+      "epoch": 1,
+      "train_weighted_ce": 1.9858658279691808,
+      "validation_ce": 0.003556538969261924,
+      "validation_macro_f1": 0.6288309093494697,
+      "validation_balanced_accuracy": 0.9982055849531095,
+      "validation_benign_precision": 0.14906832298136646,
+      "validation_benign_recall": 1.0,
+      "validation_malicious_recall": 0.9964111699062189,
+      "validation_roc_auc_malicious": 0.9991273510766491,
+      "validation_average_precision_benign": 0.3989084832434864,
+      "amp_skipped_updates": 4,
+      "selected_as_best": true
+    },
+    {
+      "epoch": 2,
+      "train_weighted_ce": 1.765682449016074,
+      "validation_ce": 0.005707096058428111,
+      "validation_macro_f1": 0.6288309093494697,
+      "validation_balanced_accuracy": 0.9982055849531095,
+      "validation_benign_precision": 0.14906832298136646,
+      "validation_benign_recall": 1.0,
+      "validation_malicious_recall": 0.9964111699062189,
+      "validation_roc_auc_malicious": 0.9992485068371142,
+      "validation_average_precision_benign": 0.4917600884623983,
+      "amp_skipped_updates": 2,
+      "selected_as_best": false
+    }
+  ],
+  "image_hash_diagnostics": {
+    "hash_basis": "Stored SHA-256 of encoded PNG bytes from Step 5; bytes not re-read.",
+    "unique_train_png_hashes": 150221,
+    "unique_validation_png_hashes": 305,
+    "validation_images_matching_any_training_png": 0,
+    "validation_benign_matching_training_malicious_png": 0,
+    "validation_malicious_matching_training_benign_png": 0,
+    "training_hash_groups_with_both_labels": 0,
+    "validation_hash_groups_with_both_labels": 0,
+    "train_validation_hash_groups_with_both_labels": 0,
+    "minimum_validation_errors_if_same_image_same_label": 0,
+    "malicious_misses_with_png_also_used_by_benign_training": 0,
+    "interpretation": "The minimum-error count is an empirical constraint if identical images receive identical labels; it is not a generalization bound. Different encoded hashes can still have identical or similar pixels."
+  },
+  "fewer_than_two_varying_features": {
+    "train": {
+      "benign": 0,
+      "malicious": 0
+    },
+    "validation": {
+      "benign": 0,
+      "malicious": 0
+    }
+  },
+  "test_images_read": 0,
+  "test_predictions_used": 0,
+  "zero_day_evaluated": false,
+  "notes": [
+    "Per-image probabilities are from the selected best epoch only, not necessarily the latest epoch.",
+    "Equal confusion counts across epochs do not establish identical error IDs or unchanged probabilities.",
+    "The threshold search uses validation labels; its best score is exploratory and optimistically selected, not an independent evaluation.",
+    "Neither exact duplicates nor class imbalance alone prove the cause of the observed errors.",
+    "The original model, threshold, datasets and checkpoints have not been changed."
+  ]
+}

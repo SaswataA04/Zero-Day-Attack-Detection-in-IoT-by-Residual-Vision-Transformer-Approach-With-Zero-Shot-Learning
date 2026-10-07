@@ -1,0 +1,22 @@
+.venv/
+.venv-1/
+.venv-2/
+.venv-3/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+data/
+*.tmp
+*.log
+
+# Generated datasets / intermediate artifacts
+prepared/
+
+# Trained models / checkpoints
+trained/

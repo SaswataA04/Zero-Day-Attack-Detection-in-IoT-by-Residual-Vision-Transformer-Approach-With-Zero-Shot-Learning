@@ -1,0 +1,230 @@
+{
+  "step": "05b_training_png_lookup_validation_baseline",
+  "input_dir": "C:\\Users\\Saswa\\OneDrive\\Desktop\\iot_zero_day_research\\prepared\\dataset7_step05_no_uid",
+  "step05_configuration_hash": "80a305f1c9add791a953363fd8f1ad894b331467653bd3e25fa5f51d21a4ca4e",
+  "validation_fold": 0,
+  "feature_order": [
+    "id.resp_h",
+    "id.resp_p",
+    "history",
+    "id.orig_h",
+    "id.orig_p",
+    "conn_state",
+    "proto",
+    "orig_pkts",
+    "orig_ip_bytes",
+    "ts",
+    "duration",
+    "resp_ip_bytes",
+    "resp_bytes",
+    "orig_bytes",
+    "resp_pkts"
+  ],
+  "partitions": {
+    "train": {
+      "images": 152790,
+      "class_counts": {
+        "benign": 96,
+        "malicious": 152694
+      },
+      "distinct_png_hashes": 885,
+      "distinct_png_hashes_by_class": {
+        "benign": 96,
+        "malicious": 789
+      },
+      "hash_groups_with_both_labels": 0,
+      "largest_hash_group_images": 15055
+    },
+    "validation": {
+      "images": 38198,
+      "class_counts": {
+        "benign": 24,
+        "malicious": 38174
+      },
+      "distinct_png_hashes": 305,
+      "distinct_png_hashes_by_class": {
+        "benign": 24,
+        "malicious": 281
+      },
+      "hash_groups_with_both_labels": 0,
+      "largest_hash_group_images": 3731
+    }
+  },
+  "validation_overlap": {
+    "images_seen_in_training": 38036,
+    "fraction_seen_in_training": 0.9957589402586523,
+    "seen_by_actual_class": {
+      "benign": 0,
+      "malicious": 38036
+    },
+    "unseen_by_actual_class": {
+      "benign": 24,
+      "malicious": 138
+    },
+    "hash_groups_shared_by_train_and_validation": 143,
+    "train_validation_hash_groups_with_both_labels": 0
+  },
+  "prediction_rule": {
+    "seen_hash": "Majority training label for that hash; a tie uses the overall training majority.",
+    "unseen_hash": "Overall training majority label; a global tie chooses benign.",
+    "training_majority_label": 1,
+    "training_majority_class": "malicious",
+    "validation_targets_used_to_fit_predictions": 0
+  },
+  "lookup_validation_metrics": {
+    "all": {
+      "images": 38198,
+      "confusion_matrix_actual_rows_predicted_columns": [
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          38174
+        ]
+      ],
+      "confusion_order": [
+        "benign",
+        "malicious"
+      ],
+      "accuracy": 0.9993716948531337,
+      "macro_f1": 0.4998428743518567,
+      "balanced_accuracy": 0.5,
+      "both_actual_classes_present": true,
+      "per_class": {
+        "benign": {
+          "support": 24,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "malicious": {
+          "support": 38174,
+          "precision": 0.9993716948531337,
+          "recall": 1.0,
+          "f1": 0.9996857487037134
+        }
+      }
+    },
+    "seen_png": {
+      "images": 38036,
+      "confusion_matrix_actual_rows_predicted_columns": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          38036
+        ]
+      ],
+      "confusion_order": [
+        "benign",
+        "malicious"
+      ],
+      "accuracy": 1.0,
+      "macro_f1": null,
+      "balanced_accuracy": null,
+      "both_actual_classes_present": false,
+      "per_class": {
+        "benign": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": null
+        },
+        "malicious": {
+          "support": 38036,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "unseen_png": {
+      "images": 162,
+      "confusion_matrix_actual_rows_predicted_columns": [
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          138
+        ]
+      ],
+      "confusion_order": [
+        "benign",
+        "malicious"
+      ],
+      "accuracy": 0.8518518518518519,
+      "macro_f1": 0.46,
+      "balanced_accuracy": 0.5,
+      "both_actual_classes_present": true,
+      "per_class": {
+        "benign": {
+          "support": 24,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "malicious": {
+          "support": 138,
+          "precision": 0.8518518518518519,
+          "recall": 1.0,
+          "f1": 0.92
+        }
+      }
+    }
+  },
+  "always_training_majority_validation_metrics": {
+    "images": 38198,
+    "confusion_matrix_actual_rows_predicted_columns": [
+      [
+        0,
+        24
+      ],
+      [
+        0,
+        38174
+      ]
+    ],
+    "confusion_order": [
+      "benign",
+      "malicious"
+    ],
+    "accuracy": 0.9993716948531337,
+    "macro_f1": 0.4998428743518567,
+    "balanced_accuracy": 0.5,
+    "both_actual_classes_present": true,
+    "per_class": {
+      "benign": {
+        "support": 24,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "malicious": {
+        "support": 38174,
+        "precision": 0.9993716948531337,
+        "recall": 1.0,
+        "f1": 0.9996857487037134
+      }
+    }
+  },
+  "test_predictions_computed": 0,
+  "test_targets_or_hashes_used": 0,
+  "png_bytes_read": 0,
+  "neural_network_trained": false,
+  "datasets_or_checkpoints_changed": false,
+  "notes": [
+    "This is an exact-PNG lookup baseline, not CZ-ResViT performance.",
+    "Saved hashes are trusted metadata; PNG bytes were not rehashed.",
+    "Identical image hashes do not imply that the same source rows were reused.",
+    "Distinct hashes can still correspond to identical or similar decoded pixels.",
+    "Unseen PNG hashes are not necessarily independent captures or unseen attack families.",
+    "No new split, duplicate removal, rendering change, or threshold tuning is performed.",
+    "Macro F1 and balanced accuracy are null for subsets missing an actual class."
+  ]
+}

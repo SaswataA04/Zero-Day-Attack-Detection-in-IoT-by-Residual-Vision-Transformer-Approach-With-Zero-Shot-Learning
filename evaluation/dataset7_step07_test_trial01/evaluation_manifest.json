@@ -1,0 +1,33 @@
+{
+  "step": "07_one_shot_test_evaluation",
+  "script_version": 1,
+  "input_dir": "C:\\Users\\Saswa\\OneDrive\\Desktop\\iot_zero_day_research\\prepared\\dataset7_step05c_hashclean_no_uid_v2",
+  "dataset_fingerprint": "245b6c121ac17b9f6ea3a5208951364805c65a38ae44f3dcd675abe8a1c0314f",
+  "model_path": "C:\\Users\\Saswa\\OneDrive\\Desktop\\iot_zero_day_research\\trained\\dataset7_step06d_hash_balanced_trial01\\best_model.pt",
+  "model_sha256": "cbc9c10430eea62cc51bfa856cec90f6ad76af648227e47df91d06bda1aef2c6",
+  "frozen_checkpoint_epoch": 16,
+  "checkpoint_config_hash": "9f6dd2fb4098bbf64293700e09fd6c56dad9575abd79e85118771478926ffe2c",
+  "decision_threshold": 0.5,
+  "threshold_tuned_on_test": false,
+  "training_performed": false,
+  "checkpoint_modified": false,
+  "test_images_evaluated": 47747,
+  "test_class_counts": {
+    "benign": 30,
+    "malicious": 47717
+  },
+  "runtime": {
+    "python": "3.11.0",
+    "torch": "2.12.0+cu126",
+    "torchvision": "0.27.0+cu126",
+    "numpy": "2.4.6",
+    "pillow": "12.3.0",
+    "scikit_learn": "1.9.1",
+    "device": "cuda:0",
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "cuda_runtime": "12.6",
+    "amp": true,
+    "workers": 2,
+    "torch_threads": 4
+  }
+}

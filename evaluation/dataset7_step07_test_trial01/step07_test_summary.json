@@ -1,0 +1,147 @@
+{
+  "step": "07_one_shot_dataset7_test_evaluation",
+  "model_status": "frozen",
+  "frozen_checkpoint_epoch": 16,
+  "frozen_validation_metrics": {
+    "n": 162,
+    "accuracy": 0.9074074074074074,
+    "macro_f1": 0.8445794691397506,
+    "weighted_f1": 0.9141171872224,
+    "balanced_accuracy": 0.911231884057971,
+    "confusion_matrix": [
+      [
+        22,
+        2
+      ],
+      [
+        13,
+        125
+      ]
+    ],
+    "confusion_order": [
+      "benign",
+      "malicious"
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.6285714285714286,
+        "recall": 0.9166666666666666,
+        "f1": 0.7457627118644068,
+        "support": 24
+      },
+      "malicious": {
+        "precision": 0.984251968503937,
+        "recall": 0.9057971014492754,
+        "f1": 0.9433962264150944,
+        "support": 138
+      }
+    },
+    "roc_auc_malicious": 0.9577294685990339,
+    "average_precision_malicious": 0.9929042476087668,
+    "average_precision_benign": 0.7912549770021968,
+    "cross_entropy": 0.4259238040525995
+  },
+  "test_metrics": {
+    "n": 47747,
+    "accuracy": 0.999434519446248,
+    "macro_f1": 0.8245338404534355,
+    "weighted_f1": 0.9994968922497487,
+    "balanced_accuracy": 0.9164361408582546,
+    "confusion_matrix_actual_rows_predicted_columns": [
+      [
+        25,
+        5
+      ],
+      [
+        22,
+        47695
+      ]
+    ],
+    "confusion_order": [
+      "benign",
+      "malicious"
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.5319148936170213,
+        "recall": 0.8333333333333334,
+        "f1": 0.6493506493506493,
+        "support": 30,
+        "predicted_count": 47
+      },
+      "malicious": {
+        "precision": 0.999895178197065,
+        "recall": 0.9995389483831758,
+        "f1": 0.9997170315562216,
+        "support": 47717,
+        "predicted_count": 47700
+      }
+    },
+    "roc_auc_malicious": 0.9665409253166237,
+    "average_precision_malicious": 0.9999495830176285,
+    "average_precision_benign": 0.6546157711056739,
+    "decision_threshold": 0.5,
+    "cross_entropy": 0.0029624953621987973,
+    "elapsed_seconds": 93.52
+  },
+  "always_malicious_test_baseline": {
+    "n": 47747,
+    "accuracy": 0.9993716882736088,
+    "macro_f1": 0.4998428727059415,
+    "weighted_f1": 0.9990576311353346,
+    "balanced_accuracy": 0.5,
+    "confusion_matrix_actual_rows_predicted_columns": [
+      [
+        0,
+        30
+      ],
+      [
+        0,
+        47717
+      ]
+    ],
+    "confusion_order": [
+      "benign",
+      "malicious"
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 30,
+        "predicted_count": 0
+      },
+      "malicious": {
+        "precision": 0.9993716882736088,
+        "recall": 1.0,
+        "f1": 0.999685745411883,
+        "support": 47717,
+        "predicted_count": 47747
+      }
+    },
+    "roc_auc_malicious": 0.5,
+    "average_precision_malicious": 0.9993716882736088,
+    "average_precision_benign": 0.0006283117263911869,
+    "decision_threshold": 0.5
+  },
+  "test_class_counts": {
+    "benign": 30,
+    "malicious": 47717
+  },
+  "decision_threshold": 0.5,
+  "threshold_tuned_on_test": false,
+  "test_evaluated": true,
+  "zero_day_evaluated": false,
+  "model_sha256": "cbc9c10430eea62cc51bfa856cec90f6ad76af648227e47df91d06bda1aef2c6",
+  "checkpoint_config_hash": "9f6dd2fb4098bbf64293700e09fd6c56dad9575abd79e85118771478926ffe2c",
+  "dataset_fingerprint": "245b6c121ac17b9f6ea3a5208951364805c65a38ae44f3dcd675abe8a1c0314f",
+  "notes": [
+    "This is the first final evaluation of the frozen Step-6D best checkpoint on the Dataset-7 test split.",
+    "No optimizer, gradient calculation, training, checkpoint update or threshold search was performed.",
+    "The classification threshold was fixed at 0.5 before test inference.",
+    "ROC AUC and average precision are ranking metrics and were computed without threshold tuning.",
+    "Because the test set is extremely imbalanced, accuracy alone must not be used to judge the classifier.",
+    "Do not alter the frozen methodology based on this test result and then report the same test set as an untouched final holdout."
+  ]
+}
